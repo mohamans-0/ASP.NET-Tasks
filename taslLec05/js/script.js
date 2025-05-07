@@ -1,63 +1,63 @@
 $(document).ready(function () {
 
-
-  	// fill data in the form 
 	$('#fill').on('click', function (e) {
-		// to keep the data in the form 
-		e.preventDefault();
-
-		// to set the values in $('#id').val('moha')--> to set value (moha) in (#id)
-		$('#email').val('mohmadmans29@gmail.com');
+		e.preventDefault(e);
+		$('#email').val('mohmadmans29@hmail.com');
 		$('#password').val('123');
 		$('#age').val('23');
-		$('#salary').val('35000');
-
+		$('#salary').val('20000');
 
 	})
 
-
-	// to send the data in the form to the table
 	$('#submit').on('click', function (e) {
-
 		e.preventDefault(e);
+
 		var email = $('#email').val();
 		var pass = $('#password').val();
-		var age = $('#age').val();
 		var salary = $('#salary').val();
+		var age = $('#age').val();
 
-		var tableReslut = `<tr>
-			<td>${email}</td>
-			<td>${pass}</td>
-			<td>${age}</td>
-			<td>${salary}</td>
-			<td>
-				<button class='btn btn-danger'>Delete </button>
-			</td>
+		var result = `
+		<tr>
+		<td>${email}</td>
+		<td>${pass}</td>
+		<td>${age}</td>
+		<td>${salary}</td>
+		<td> <button class='btn btn-danger del' >Delete </button> </td>
+		</tr>`
 
-		</tr>
-		`;
 
-		var cardResult = `
-		<div class="card col-12 mx-1 mt-3 ">
-  
-			<h2 class="list-group-item">The E-mail : ${email}</h2>
-		    <h3 class="list-group-item">The Age is ${age}</h3>
-		    <h4 class="list-group-item">The Salary ${salary}$</h4>
- 
+		var card = `
+
+		<div class="card col-3 mx-2 mt-2 " >
+		   <p class="list-group-item">The Email is :${email} </p>
+			<p class="list-group-item">The Salary is : ${age}</p>
+			<p class="list-group-item">The Age is :${salary} </p>
 		</div>
+
 		`
 
-
-
-		$('#cardsDiv').append(cardResult)
-		$('#dataDable tbody').append(tableReslut);
-
+		$('#cardsDiv').append(card);
+		$('#dataDable tbody').append(result);
 	})
 
-			$('#dataDable tbody').on('click', '.del', function () {
+	$('#change').on('click', function (e) {
+		$('.lblChange').css({
+			'background-color': 'blue',
+			'color': 'white'
+		});
+		//$('.lblChange').css('background-color', 'red');
+	})
+
+	//$('.btn btn-danger del').on('click', '.del', function () {
+	//	$(this).closest('tr').remove();
+	//})
+
+	$('#dataDable tbody').on('click', '.del', function () {
 		$(this).closest('tr').remove();
 		// $('#cardsDiv').remove();
 	});
 
+
+})
 	
-	})
