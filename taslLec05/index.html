@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task lec005</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<button class="btn btn-success mt-5" id="change">Change</button>
+		</div>
+		<div class="row mt-5">
+			<div class="col-7">
+				<form>
+
+					<div class="mb-3">
+						<label class="form-label lblChange ">Email address</label>
+						<input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label lblChange">Password</label>
+						<input type="password" class="form-control" id="password">
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label lblChange">Age</label>
+						<input type="text" class="form-control " id="age">
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label lblChange">salary</label>
+						<input type="text" class="form-control" id="salary">
+					</div>
+
+					<button id="submit" class="btn btn-primary">Submit</button>
+					<button  id="fill" class="btn btn-success">Fill</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col" id="dvView">
+				<table class="table table-bordered mt-5" id="dataDable">
+					<thead>
+						<tr>
+							<th>Email</th>
+							<th>Password</th>
+							<th>Age</th>
+							<th>Salary</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row" id="cardsDiv">
+				<div id="cardsDiv">
+
+				</div>
+			</div>
+	</div>
+
+
+	
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>
