@@ -54,4 +54,10 @@ $(document).ready(function () {
 
 	})
 
+		$('#dataDable tbody').on('click', '.del', function () {
+		$(this).closest('tr').remove();
+		// $('#cardsDiv').remove();
+	});
+
+	
 	})
