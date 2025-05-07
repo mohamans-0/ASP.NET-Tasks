@@ -49,14 +49,11 @@ $(document).ready(function () {
 		//$('.lblChange').css('background-color', 'red');
 	})
 
-	//$('.btn btn-danger del').on('click', '.del', function () {
-	//	$(this).closest('tr').remove();
-	//})
-
-	$('#dataDable tbody').on('click', '.del', function () {
+	$('.btn btn-danger del').on('click', '.del', function () {
 		$(this).closest('tr').remove();
-		// $('#cardsDiv').remove();
-	});
+	})
+
+
 
 
 })
