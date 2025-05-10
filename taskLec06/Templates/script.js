@@ -1,4 +1,4 @@
-﻿let table;
+let table;
 
 $(document).ready(function () {
 
@@ -10,15 +10,15 @@ $(document).ready(function () {
 	});
 	
 
-	$('#btnSave').on('click', function (e) {
+	$('#btnSave').on('click', function () {
 
-		e.preventDefault();
+		// e.preventDefault();
 
-		const rend = $('#exampleModal #rend').val();
-		const brow = $('#exampleModal #brow').val();
-		const plat = $('#exampleModal #plat').val();
-		const engi = $('#exampleModal #engi').val();
-		const grad = $('#exampleModal #grad').val();
+		const rend = $('#rend').val();
+		const brow = $('#brow').val();
+		const plat = $('#plat').val();
+		const engi = $('#engi').val();
+		const grad = $('#grad').val();
 
 		if (!rend || !brow || !plat || !engi || !grad) {
 			if (!rend) {
@@ -49,7 +49,9 @@ $(document).ready(function () {
 			return;
 		}
 
-	
+		
+
+		// ??????????????
 		table = new DataTable('#myDataTable');
 		table.destroy();
 
@@ -68,13 +70,22 @@ $(document).ready(function () {
 
 		$('#myDataTable').append(resultRow);
 		table = new DataTable('#myDataTable');
-		
+
+		Swal.fire({
+			position: "top-center",
+			icon: "success",
+			title: "Row has been saved",
+			showConfirmButton: false,
+			timer: 1000
+		});
+
 	});
 
 
 	$(document).on('click', '#dele', function () {
 
-		
+
+
 
 		const row = this;
 		Swal.fire({
